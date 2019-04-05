@@ -1,0 +1,5 @@
+{
+  "require": {
+    "best-play/bestplay-currency-converter": "dev-master"
+  }
+}
