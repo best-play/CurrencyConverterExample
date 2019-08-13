@@ -43,7 +43,7 @@ class Logger
             $this->getResult()['amount']." ".$this->getResult()['from']." -> ".$this->getResult()['result']." ".$this->getResult()['to'].PHP_EOL.
             "-------------------------".PHP_EOL;
 
-        file_put_contents('currency.log', $this->logger_string, FILE_APPEND);
+        file_put_contents('currency.txt', $this->logger_string, FILE_APPEND);
 
         return $this;
     }
