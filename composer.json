@@ -1,5 +1,6 @@
 {
   "require": {
-    "best-play/bestplay-currency-converter": "dev-master"
+    "best-play/bestplay-currency-converter": "dev-master",
+    "ext-json": "*"
   }
 }
