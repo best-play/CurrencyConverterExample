@@ -6,6 +6,12 @@ use Logger\Logger;
 
 require __DIR__ . "/../vendor/autoload.php";
 
+if ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+    $http_x_headers = explode( ',', $_SERVER['HTTP_X_FORWARDED_FOR'] );
+
+    $_SERVER['REMOTE_ADDR'] = $http_x_headers[0];
+}
+
 $logger = new Logger($_SERVER['REMOTE_ADDR']);
 $queries = [];
 parse_str($_SERVER['QUERY_STRING'], $queries);
